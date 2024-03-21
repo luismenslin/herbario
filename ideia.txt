@@ -1,0 +1,21 @@
+Herbario
+    Cadastro de Pessoas
+        Alunos
+        Professores
+        Estagiarios
+
+    Cadastro de Livros
+
+    Locação de Livros
+
+    Cadastro de plantas (Informações do Tombo)
+
+    Controle de ciclo de plantas
+        A cada 6 meses as plantas precisam
+            Passar 2 dias na estufa
+            Passar 1 dia no freezer
+
+    Apontamento dos estagiarios (Oque eles fizeram durante o tudo deles)
+
+    Cadastro de usuários
+        Controle de acesso
