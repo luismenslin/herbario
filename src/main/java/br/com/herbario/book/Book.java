@@ -19,7 +19,7 @@ public class Book {
     private Integer publication;
 
     public Book (BookData data) {
-        this.title = data.name();
+        this.title = data.title();
         this.author = data.author();
         this.edition = data.edition();
         this.publication = data.publication();

@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotNull;
 
 public record BookData(
         @NotBlank
-        String name,
+        String title,
         @NotBlank
         String author,
         @NotBlank

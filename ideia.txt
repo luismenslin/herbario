@@ -17,5 +17,11 @@ Herbario
 
     Apontamento dos estagiarios (Oque eles fizeram durante o tudo deles)
 
+   Link pro Jabot
+
+   Home page publica
+
     Cadastro de usuários
         Controle de acesso
+
+
