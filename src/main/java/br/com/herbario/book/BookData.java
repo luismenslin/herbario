@@ -4,11 +4,11 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public record BookData(
-        @NotBlank
+        @NotNull
         String title,
-        @NotBlank
+        @NotNull
         String author,
-        @NotBlank
+        @NotNull
         String edition,
         @NotNull
         Integer publication) {

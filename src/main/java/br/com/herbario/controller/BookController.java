@@ -2,12 +2,14 @@ package br.com.herbario.controller;
 
 import br.com.herbario.book.Book;
 import br.com.herbario.book.BookData;
-import br.com.herbario.book.BookRepository;
+import br.com.herbario.book.BookList;
+import br.com.herbario.service.BookService;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.beans.Transient;
 import java.util.List;
 
 @RestController
@@ -15,24 +17,29 @@ import java.util.List;
 public class BookController {
 
     @Autowired
-    private BookRepository repository;
+    private BookService service;
 
+    @GetMapping("/list")
+    public List<BookList> getBooks() {
+        return service.getBooks();
+    }
 
-    @GetMapping
-    public List<Book> getBooks() {
-        return repository.findAll();
+    @GetMapping("/{id}")
+    public Book getBookById(@PathVariable Long id) {
+        return service.getBookById(id);
     }
 
     @PostMapping("/register")
     @Transactional
     public void register(@RequestBody @Valid BookData data) {
-        repository.save(new Book(data));
+        service.saveBook(data);
     }
 
     @DeleteMapping("/delete")
     @Transactional
     public void delete(@RequestBody Book book) {
-        repository.delete(book);
+        service.deleteBook(book);
     }
+
 
 }

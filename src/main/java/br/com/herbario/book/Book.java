@@ -24,4 +24,5 @@ public class Book {
         this.edition = data.edition();
         this.publication = data.publication();
     }
+
 }
